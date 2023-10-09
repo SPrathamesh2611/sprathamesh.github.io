@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_project</title>
+</head>
+
+<body>
+    <h1>Add Project</h1>
+    <form method="POST" action="/add_project" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label><i style="font-weight: bold;">Name of Project</i></label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label><i style="font-weight: bold;">1st Image of Project</i></label>
+        <input type="file" name="image1" required><br><br>
+        <label><i style="font-weight: bold;">2nd Image of Project</i></label>
+        <input type="file" name="image2"><br><br>
+        <label><i style="font-weight: bold;">3rd Image of Project</i></label>
+        <input type="file" name="image3"><br><br>
+        <label><i style="font-weight: bold;">4th Image of Project</i></label>
+        <input type="file" name="image4"><br><br>
+    
+        <label><i style="font-weight: bold;">Video of Project</i></label>
+        <input type="file" name="video"><br><br>
+    
+        
+        
+
+        <h2>Project Skills</h2>
+        <ul>
+            {% for x in context %}
+            <li>
+                <label>
+                    <input type="checkbox" name="selected_skills" value="{{ x.name }}">
+                    <strong>Skills Name:</strong> <span>{{ x.name }}</span>
+                </label>
+            </li>
+            {% empty %}
+            <li>No skill saved yet.</li>
+            {% endfor %}
+        </ul>
+
+
+        <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50">{{ project.description }}</textarea>
+    <br>
+
+        <input type="submit" value="Add Project">
+    </form>
+
+    
+
+    <!-- Display Saved Data -->
+    <h1>Saved Projects</h1>
+    <ul>
+        {% for project in projects %}
+        <li>
+            <strong>Project Name:</strong> {{ project.name }}<br>
+            <strong>Project Skills:</strong> {{ project.skills }}<br>
+            <img src="{{ project.image.url }}" alt="{{ project.name }} Image" width="200"><br>
+            <strong>Project description:</strong><p>{{project.description}}</p><br><br>
+            
+        </li>
+        {% empty %}
+        <li>No projects saved yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

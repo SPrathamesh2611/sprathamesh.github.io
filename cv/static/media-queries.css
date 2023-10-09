@@ -1,0 +1,76 @@
+/* media queries */
+
+
+/* Media query for mobile devices in portrait mode (e.g., iPhone) */
+@media (max-width: 767px) and (orientation: portrait) {
+    /* Styles specific to mobile devices in portrait mode */
+    
+    #info{
+        width: 735px;
+    }
+    #multicolor{
+        font-size: 35px;
+    }
+    .float-parent-element{
+        height: 970px;
+    }
+    .float-child-element {
+        padding: 15px;
+        float: none;
+        width: 100%;
+    }
+    .float-child-element img{
+        height: 500px;
+    }
+    #skill{
+        width: 735px;
+        /* width: auto; */
+    }
+    #work-animation {
+        /* height: auto; */
+        height: 600px;
+    }
+    .work-logo {
+        width: 300px;
+    }
+    .project-skill p{
+        width: 300px !important;
+    }
+    #project-name h5{
+        width: 300px;
+    }
+    
+    .footer-parent {
+        height: auto;
+        width: 735px;
+    }
+    .footer-child {
+        float: none;
+        width: auto;
+        padding-top: 50px;
+        padding-left: 70px !important;
+    }
+    .rights {
+        width: 735px;
+    }
+    
+
+}
+
+/* Media query for mobile devices in landscape mode (e.g., iPhone) */
+@media (max-width: 767px) and (orientation: landscape) {
+    /* Styles specific to mobile devices in landscape mode */
+    
+}
+
+/* Media query for tablets in portrait mode (e.g., iPads) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Styles specific to tablets in portrait mode */
+    
+}
+
+/* Media query for tablets in landscape mode (e.g., iPads) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Styles specific to tablets in landscape mode */
+    
+}

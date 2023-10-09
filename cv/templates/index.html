@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+  </script>
+  {% load static %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  {% comment %} this is include the Owl Carousel CSS and JavaScript files in your HTML file: {% endcomment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+  <link rel="stylesheet" href="{% static 'styles-index.css' %}">
+  <link rel="stylesheet" href="{% static 'media-queries.css' %}">
+  <script src="{% static 'script-index.js' %}"></script>
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      {% if a %}
+      <a class="navbar-brand" href="{% url 'index' %}">Welcome Prathamesh</a>
+      {% else %}
+      <a class="navbar-brand" href="#">My CV</a>
+      {% endif %}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="unique" class="nav-link active" aria-current="page" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skill">SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">MY WORK</a>
+          </li>
+          <li id="contact_nav" class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <div id="info">
+
+    <div class="float-end">
+      <h4>Django Devloper</h4>
+      <h1>Hey! I AM</h1>
+      <h1 id="multicolor">PRATHAMESH SURVE.</h1>
+      <p>Am a Indian based Django Developer passionate and
+        experienced in building Web applications.</p>
+      <!-- <button id="button" class="text" type="submit" style="margin: 3px;">HIRE ME</button> -->
+      <div>
+        <p>Follow Me:</p>
+        <a href="https://www.facebook.com/prathamesh.p.surve"><button><i class="fa fa-facebook-official"
+              aria-hidden="true"></i></button></a>
+        <a href="https://www.instagram.com/prathamesh__surve_/"><button><i class="fa fa-instagram"
+              aria-hidden="true"></i></button></a>
+        <a href="https://www.linkedin.com/in/prathamesh-surve-4323301a0/"><button><i class="fa fa-linkedin-square"
+              aria-hidden="true"></i></button></a>
+      </div>
+    </div>
+
+
+    <div class="clear-float" id="about"></div>
+    <div class="about_me">
+      <div class="float-parent-element">
+        <div class="float-child-element">
+          <img src="{% static 'coder_boy.png' %}" alt="...">
+        </div>
+
+        <div class="float-child-element">
+          <h2>ABOUT ME</h2>
+          <h3>Why hire me?</h3>
+          <div id="discription">
+
+            <p>I'm 23 years old creative <strong>DJANGO DEVELOPER</strong> based in
+              <a
+                href="https://www.google.com/maps/place/Prabhadevi,+Mumbai,+Maharashtra/@19.0152594,72.8232928,16z/data=!3m1!4b1!4m6!3m5!1s0x3be7ceba2edaae71:0x94033f02db425cf!8m2!3d19.0163283!4d72.8291129!16zL20vMDVyOWdx?entry=ttu"><strong>Prabhadevi,Mumbai,INDIA</strong></a>
+              specializing in User Interface Design and Development. I build clean, appealing, and functional interfaces
+              which comply with the latest web standards🔥
+            </p>
+
+            <p>
+              I recently gratuated with a <strong>BE</strong> Degree in <strong>Computer Engineering</strong> from
+              <a href="https://mu.ac.in/"><strong>Mumbai
+                  University</strong></a> and recently completed my
+              Full-Stack-Python Development training from
+              <a
+                href="https://www.google.com/maps/place/QSpiders+Mumbai+Thane/@19.1884448,72.9744741,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b94155f98d61:0x223b1fe0dd257c4b!8m2!3d19.1884398!4d72.977049!16s%2Fg%2F11h71h8lh5?entry=ttu"><strong>Qspider</strong>
+                located in Thane</a>
+            </p>
+            <div>
+              <a href="https://drive.google.com/file/d/189gqHf5nHRS2yI7WEBK9qT_Iq6jtK4lr/view?usp=sharing" download="RESUME.pdf"
+                target="_blank" rel="noopener noreferrer">
+                <button class="download-cv">Download Cv <i class="fa fa-download" aria-hidden="true"></i></button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="skill" class="progress-container">
+    <div class="progress-title">
+      <h2>My Skills Progress so far</h2>
+      <h3>My Skills</h3><br><br>
+    </div>
+
+
+
+    <div class="owl-carousel owl-carousel1">
+      {% for x in context %}
+
+      <div>
+        <div class="skill-logo">
+          <img src="{{ x.logo.url }}" alt="Card 1">
+        </div>
+        <div class="skill-name">
+          <h5 style="color: white;text-align: center;">{{x.name}}</h5> <!-- Added text-center class -->
+        </div>
+        <div id="level">
+          <div class="skill-level">
+            <p> {{x.level}}</p>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+      {% if a %}
+      <div id="blank">
+        <div class="blank-logo">
+          <a href="{% url 'add_skills' %}"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a>
+        </div>
+        <div class="blank-name">
+          <h5>Add Skill</h5>
+          <!-- Added text-center class -->
+        </div>
+        <div id="blank-level">
+          <div class="skill-blank-level">
+            <p> Add Level</p>
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+    </div>
+
+
+    <script>
+      $(document).ready(function () {
+        $('.owl-carousel1').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      });
+    </script>
+    <hr id="work">
+
+    <div class="progress-title">
+      <br>
+      <h2>CHECK OUT MY PROJECT</h2>
+      <h3>My Work</h3><br><br>
+    </div>
+    <div class="owl-carousel owl-carousel2">
+      {% for project in projects %}
+
+      <div id="work-animation">
+        <div class="work-logo">
+          <img src="{{ project.image1.url }}" alt="{{ project.name }} Image">
+        </div>
+        <div class="project-skill">
+          <div>
+            <p id="multicolor"
+              style="text-align: left; padding-top: 10px;font-size: 15px;text-transform: uppercase;width: 445px;margin-bottom: 0px;">
+              <strong>{{project.skills}}</strong></p>
+          </div>
+        </div>
+        <div id="project-name">
+          <h5>
+            {{project.name}}</h5> <!-- Added text-center class -->
+        </div>
+        <div id="project-description">
+          <p>{{project.description}}</p>
+        </div>
+        <br><br>
+
+        <div class="more-info">
+          <a href="{% url 'project_info' project.name %}">More info</a>
+        </div>
+        <div class="more-contact">
+          <a href="{% url 'add_skills' %}">Source Code</a>
+        </div>
+
+      </div>
+
+      {% endfor %}
+      {% if a %}
+      <div>
+        <div id="blank-project">
+          <a href="{% url 'add_project' %}">
+            <div class="blank-project-logo">
+              <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
+            </div>
+          </a>
+
+
+          <div id="blank-project-skill">
+            <div >
+              <p id="multicolor"
+                style="text-align: left; padding-top: 10px;font-size: 15px;text-transform: uppercase;width: 445px;margin-bottom: 0px;">
+                <strong>Add project Skills</strong></p>
+            </div>
+          </div>
+          <div class="blank-project-name">
+            <h5>
+              Add Project Name</h5> <!-- Added text-center class -->
+          </div>
+          <div class="blank-project-description">
+            <p>
+              Add Project Description</p>
+          </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel2').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+  <div id="contact" class="footer-parent">
+    <div class="footer-title">
+      <h2>I Want To Hear From You</h2>
+      <h3>Contact Me</h3>
+    </div>
+    <div class="footer-child" style="color: rgb(145, 255, 0);  padding-left: 75px;">
+      <form action="#" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+
+    <div class="footer-child" style="color: rgb(145, 255, 0); padding-left: 200px;">
+      <div>
+        <div class="contact-logo"><i class="fa fa-phone fa-4x" aria-hidden="true"
+            style="padding-left: 15px;padding-top: 5px;"></i>
+        </div>
+        <div class="contact-logo">
+          <h5>Call Me:</h5>
+          <h5>+91 9833313287</h5>
+        </div>
+        <br><br>
+      </div>
+      <div>
+        <div class="contact-logo"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"
+            style="padding-left: 15px;padding-top: 10px;"></i>
+        </div>
+        <div class="contact-logo">
+          <h5>Email Me:</h5>
+          <h5>spratham2611@gmail.com</h5>
+        </div>
+        <br><br>
+      </div>
+      <div>
+        <div class="contact-logo"><i class="fa fa-map-marker fa-3x" aria-hidden="true"
+            style="padding-left: 25px;padding-top: 13px;"></i>
+        </div>
+        <div class="contact-logo">
+          <h5>Location:</h5>
+          <h5>PRABHADEVI, MUMBAI, INDIA</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if success_message %}
+  <div id="success" class="alert alert-success">
+    {{ success_message }}
+  </div>
+  {% endif %}
+  <div class="rights">
+    <p>© 2023 All rights reserved | Made with ❤️ by <a href="{% url 'login' %}">Prathamesh Surve.</a></p>
+  </div>
+  </div>
+
+</body>
+
+</html>

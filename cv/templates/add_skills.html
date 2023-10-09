@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_skills</title>
+</head>
+<body>
+    <form method="POST"  action="/add_skills" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label><i style="font-weight: bold;">Name of Skills</i></label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label><i style="font-weight: bold;">Level of Skills</i></label>
+        <!-- <input type="text" id="Level" name="Level" required><br><br> -->
+        <select name="Level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select><br><br>
+
+        <label><i style="font-weight: bold;">Logo of Skills</i></label>
+        <input type="file"  name="image" required><br><br>
+
+        <input type="submit" value="Send Message">
+      </form>
+
+    <!-- Display Saved Data -->
+    <h1>Saved Skill</h1>
+    <ul>
+        {% for x in context %}
+        <li>
+            <!-- <img src="{{ x.logo.url }}" alt="Card 1"> -->
+            <strong>Skills Name:</strong> <p>{{x.name}}</p>
+            <strong>Skill Level:</strong><p>{{x.level}}</p><br><br>
+            
+        </li>
+        {% empty %}
+        <li>No skill saved yet.</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

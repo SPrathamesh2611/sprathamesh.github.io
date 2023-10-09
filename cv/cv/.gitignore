@@ -1,0 +1,11 @@
+# .gitignore
+
+# Ignore .env file
+.env
+
+# Ignore other project-specific files or directories
+__pycache__
+*.pyc
+*.pyo
+db.sqlite3
+*.log
